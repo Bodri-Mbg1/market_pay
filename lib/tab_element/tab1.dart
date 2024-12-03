@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:market_pay/screens/screen2.dart';
+import 'package:market_pay/screens/screen_avacado.dart';
 
 class Tab1 extends StatefulWidget {
   const Tab1({super.key});
@@ -33,7 +35,7 @@ class _Tab1State extends State<Tab1> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             SizedBox(
               height: 170,
               child: PageView.builder(
@@ -183,7 +185,7 @@ class _Tab1State extends State<Tab1> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     'View All',
                     style: GoogleFonts.poppins(
@@ -197,197 +199,215 @@ class _Tab1State extends State<Tab1> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.all(15.0),
               child: Row(
                 children: [
-                  Container(
-                    height: 250,
-                    width: 170,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Column(children: [
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Image.asset(
-                        'assets/img/Organic-Kiwi-PNG.png',
-                        height: 130,
-                        width: 130,
-                      ),
-                      Text('Avocado',
-                          style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ))),
-                      Text('250g',
-                          style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                            color: Colors.black54,
-                            fontSize: 10,
-                          ))),
-                      SizedBox(
-                        height: 18,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '\$6 USD',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black12,
-                                      size: 10,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                            Spacer(),
-                            CircleAvatar(
-                              backgroundColor: Colors.black87,
-                              radius: 15,
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                            )
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Screen_avacado(),
+                          ));
+                    },
+                    child: Container(
+                      height: 250,
+                      width: 170,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(children: [
+                        const SizedBox(
+                          height: 5,
                         ),
-                      )
-                    ]),
+                        Image.asset(
+                          'assets/img/kiwi (4).png',
+                          height: 130,
+                          width: 130,
+                        ),
+                        Text('Avocado',
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ))),
+                        Text('250g',
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                              color: Colors.black54,
+                              fontSize: 10,
+                            ))),
+                        const SizedBox(
+                          height: 18,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '\$6 USD',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black12,
+                                        size: 10,
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Spacer(),
+                              CircleAvatar(
+                                backgroundColor: Colors.black87,
+                                radius: 15,
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ]),
+                    ),
                   ),
                   const Spacer(),
-                  Container(
-                    height: 250,
-                    width: 170,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Column(children: [
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Image.asset(
-                        'assets/img/banana (1).png',
-                        height: 130,
-                        width: 130,
-                      ),
-                      Text('Fresh Banana',
-                          style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600,
-                          ))),
-                      Text('250g',
-                          style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                            color: Colors.black54,
-                            fontSize: 10,
-                          ))),
-                      const SizedBox(
-                        height: 18,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(10.0),
-                        child: Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '\$2 USD',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 13,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Row(
-                                  children: [
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black38,
-                                      size: 10,
-                                    ),
-                                    Icon(
-                                      Icons.star,
-                                      color: Colors.black12,
-                                      size: 10,
-                                    ),
-                                  ],
-                                )
-                              ],
-                            ),
-                            Spacer(),
-                            CircleAvatar(
-                              backgroundColor: Colors.black87,
-                              radius: 15,
-                              child: Icon(
-                                Icons.add,
-                                color: Colors.white,
-                              ),
-                            )
-                          ],
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Screen2(),
+                          ));
+                    },
+                    child: Container(
+                      height: 250,
+                      width: 170,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Column(children: [
+                        const SizedBox(
+                          height: 5,
                         ),
-                      )
-                    ]),
+                        Image.asset(
+                          'assets/img/banana (1).png',
+                          height: 130,
+                          width: 130,
+                        ),
+                        Text('Fresh Banana',
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                              color: Colors.black,
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                            ))),
+                        Text('250g',
+                            style: GoogleFonts.poppins(
+                                textStyle: const TextStyle(
+                              color: Colors.black54,
+                              fontSize: 10,
+                            ))),
+                        const SizedBox(
+                          height: 18,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.all(10.0),
+                          child: Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '\$2 USD',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black38,
+                                        size: 10,
+                                      ),
+                                      Icon(
+                                        Icons.star,
+                                        color: Colors.black12,
+                                        size: 10,
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Spacer(),
+                              CircleAvatar(
+                                backgroundColor: Colors.black87,
+                                radius: 15,
+                                child: Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ]),
+                    ),
                   )
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(18.0),
+              padding: const EdgeInsets.all(15.0),
               child: Row(
                 children: [
                   Text(
@@ -400,7 +420,7 @@ class _Tab1State extends State<Tab1> {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     'View All',
                     style: GoogleFonts.poppins(
@@ -414,23 +434,89 @@ class _Tab1State extends State<Tab1> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(5.0),
               child: Row(
                 children: [
-                  Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: Container(
+                      height: 120,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: const Color.fromRGBO(255, 255, 255, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8, left: 8),
+                            child: CircleAvatar(
+                              radius: 20,
+                              backgroundImage: AssetImage("assets/img/f.png"),
+                            ),
+                          ),
+                          Center(
+                              child: Padding(
+                            padding: EdgeInsets.only(top: 10),
+                            child: Text("Fraise au choix"),
+                          ))
+                        ],
+                      ),
+                    ),
                   ),
-                  Spacer(),
-                  Container(
-                    height: 100,
-                    width: 100,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(20)),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Container(
+                      height: 120,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: const Color.fromRGBO(255, 255, 255, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8, left: 8),
+                            child: CircleAvatar(
+                              radius: 20,
+                              backgroundImage: AssetImage("assets/img/j.png"),
+                            ),
+                          ),
+                          Center(
+                              child: Padding(
+                            padding: EdgeInsets.only(top: 10),
+                            child: Text("Huile d'olive"),
+                          ))
+                        ],
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 5),
+                    child: Container(
+                      height: 120,
+                      width: 120,
+                      decoration: BoxDecoration(
+                          color: const Color.fromRGBO(255, 255, 255, 1),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 8, left: 8),
+                            child: CircleAvatar(
+                              radius: 20,
+                              backgroundImage: AssetImage("assets/img/m.png"),
+                            ),
+                          ),
+                          Center(
+                              child: Padding(
+                            padding: EdgeInsets.only(top: 10),
+                            child: Text("Viande de boeuf"),
+                          ))
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
